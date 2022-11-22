@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera </title>
+    <script>
+        function aleatorio(min, max){
+            return Math.floor(Math.random()*(max-min+1)+min)
+        }
+        function eleccion(jugada){
+          let resultado = ""
+          if(jugador == 1){
+            resultado = "piedra ✊"
+      } else if( jugador == 2){
+            resultado = "papel ✋"
+      } else if(jugador == 3){
+            resultado = "papel ✌️"
+      } else {
+        resultado = "mal elegido"
+      }
+      return resultado
+        }
+      let jugador = 0 
+      let pc = aleatorio(1,3)
+      jugador = prompt("elige: 1 piedra, 2 papel, tijera")
+      alert("pc elige " + eleccion(pc) )
+      alert("tu eliges " + eleccion(jugador))
+
+      if(pc == 1){
+        alert("pc elige ✊ ")
+      } else if( pc == 2){
+        alert("pc elige ✋ ")
+      } else if(pc == 3){
+        alert("pc elige ✌️ ")
+      }
+
+      // combate 
+       if(pc == jugador){
+        alert("empate ")
+       }else if ((jugador == 1 && pc == 3){
+        alert("ganaste")
+       } else if (jugador == 2 && pc == 1 ){
+        alert("ganaste")
+       } else if (jugador == 3 && pc == 2){
+        alert("ganaste")
+       }else{
+        alert("Perdiste")
+       }
+    </script>
+</head>
+<body>
+    <H1>Piedra, Papel o Tijera</H1>
+    
+</body>
+</html>
